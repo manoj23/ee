@@ -70,7 +70,7 @@ ee()
 		read -N 1 -p "ee: are you sure to run: dd $@ ? [y/n]" yn
 
 		if [ "x$yn" != "xy" ]; then
-			echo -e "\nee: dd was not executed, Bye!"
+			echo -e "\nee: dd was NOT executed, Bye!"
 			exit 0
 		fi
 	fi
