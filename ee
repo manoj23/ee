@@ -77,6 +77,9 @@ ee()
 
 	echo -e "\nee: run: dd $@"
 	dd $@
+	log "sync in progress..."
+	sync
+	log "sync done, Bye!"
 }
 
 # Main function
