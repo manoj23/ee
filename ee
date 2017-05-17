@@ -75,7 +75,7 @@ ee()
 		fi
 	fi
 
-	echo -e "\nee: run: dd $@"
+	echo -e "ee: run: dd $@"
 	dd $@
 	log "sync in progress..."
 	sync
