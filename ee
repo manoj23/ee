@@ -77,9 +77,11 @@ ee()
 
 	log "run: dd $@"
 	dd $@
-	log "sync in progress..."
-	sync
-	log "sync done, Bye!"
+	if [ $? -eq 0 ]; then
+		log "sync in progress..."
+		sync
+		log "sync done, Bye!"
+	fi
 }
 
 # Main function
