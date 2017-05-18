@@ -67,7 +67,7 @@ ee()
 	fi
 
 	if [ $enable_warning -eq 1 ]; then
-		read -N 1 -p "ee: are you sure to run: dd $@ ? [y/n]" yn
+		read -N 1 -e -p "$(basename $0): are you sure to run: dd $(echo $@) ? [y/n] " yn
 
 		if [ "x$yn" != "xy" ]; then
 			log "dd was NOT executed, Bye!"
